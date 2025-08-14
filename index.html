@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    <nav class="cabeçalho">
+        <ul class="ulCabeçalho">
+            <li class="liCabeçalho">
+                <a href="#contatos" class="aCabeçalho">Contatos</a>
+            </li>
+
+            <li class="liCabeçalho">
+            <a href="https://www.adventistas.org/pt/" class="aCabeçalho">Sobre</a>
+            </li>
+
+            <li class="liCabeçalho">
+                <a href="https://maps.app.goo.gl/ts5EDtcsjeSFdbLL9?g_st=awb" class="aCabeçalho">Localização</a>
+            </li>
+        </ul>
+    </nav>
+    <header class="caixaPrincipal">
+        <div class="caixaLogo">
+            <img src="./img/Logo.jpeg" alt="Logo-Iasd-central-FlorestaPr" class="logoImg">
+        </div>
+
+        <h1>Igreja Adventista</h1>
+        <p class="texto-1">Central de Floresta-PR</p>
+    </header>
+    <section class="caixa-links" id="caixa-kinks">
+        <ul class="ul-links">
+            <li class="instagram">
+                <a href="https://www.instagram.com/adventistas_floresta_pr?igsh=MTNxazdqc2ppZ2R5bw=="
+                 class="a-links"><i class="fab fa-instagram"></i>Instagram</a>
+            </li>
+
+            <li class="facebook">
+                <a href="https://www.facebook.com/share/1DFAmk6ReH/" 
+                class="a-links"><i class="fab fa-facebook"></i>Facebook</a>
+            </li>
+
+            <li class="youtube">
+                <a href="https://youtube.com/@iasdflorestapr?si=zPoswFOkvGm6oxgl" 
+                class="a-links"><i class="fab fa-youtube"></i>Youtube</a>
+            </li>
+
+        </ul>
+    </section>
+     <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+
+            <div class="grupo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
+            </div>
+            <button type="submit" class="botao-form"><i class="fa-brands fa-whatsapp"></i> Enviar Whatsapp</button>
+        </form>
+    </section>
+    <footer>
+    <div class="menu-fot">
+        <ul class="ul-fot">
+            <li class="li-fot">
+                <a href="#" class="email"><i class="fa-regular fa-envelope"></i>florestaiasd7@gmail.com</a>
+            </li>
+             <p class="texto-fot">© 2025 Ce-Sistemas.</p>
+
+        </ul>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+
+</html>

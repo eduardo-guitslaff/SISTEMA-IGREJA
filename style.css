@@ -1,0 +1,325 @@
+body {
+    padding: 0%;
+    margin: 0%;
+}
+
+.cabeçalho {
+    margin-top: 2rem;
+    width: 100%;
+
+}
+
+.ulCabeçalho {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+
+}
+
+.liCabeçalho {
+    list-style-type: none;
+
+
+}
+
+.aCabeçalho {
+    color: #34383a;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-weight: 500;
+    position: relative;
+}
+
+/*after quer dizer antes*/
+.aCabeçalho::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #34383a;
+    transition: width 0.5s ease;
+}
+
+.aCabeçalho:hover::after {
+    width: 100%;
+}
+
+.aCabeçalho:hover {
+    color: #545c5f;
+}
+
+.caixaPrincipal {
+    height: 30rem;
+    margin: 5rem auto 0 auto;
+    display: block;
+    justify-content: center;
+    width: 90%;
+    max-width: 600px;
+
+}
+
+.logoImg {
+    border: 2px solid #34383a;
+    border-top-right-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    width: 100%;
+    max-width: 320px;
+    margin-left: 130px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0%;
+    margin-bottom: 0%;
+    color: #34383a;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.texto-1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #383a3b;
+    font-size: 2rem;
+    padding: 0%;
+    margin: 0%;
+}
+
+.caixa-links {
+    width: 90%;
+    max-width: 600px;
+    height: 400px;
+    margin: 5rem auto 0 auto;
+
+}
+
+.ul-links {
+    width: 100%;
+    margin: 0%;
+
+
+    margin: 5rem auto 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.instagram {
+    list-style-type: none;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.facebook {
+    list-style-type: none;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.youtube {
+    list-style-type: none;
+    width: auto;
+    gap: 5rem;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.a-links {
+    background-color: #545c5f;
+    text-decoration: none;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+    width: 100%;
+    border: 1px solid rgb(32, 21, 21);
+    padding-bottom: 15px;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 8px;
+}
+
+
+
+.contatos {
+    margin-top: 0%;
+    padding: 6rem 2rem;
+}
+
+.contatos-titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.formulario-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border: 3px solid #34383a;
+    border-radius: 16px;
+}
+
+.campo-form {
+    width: 95%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: #34383a;
+    border: 2px solid #34383a;
+    outline: none;
+}
+
+.campo-form:focus {
+    border-color: #34383a;
+    box-shadow: 0 0 10px #34383a;
+}
+
+.grupo-form {
+    margin-bottom: 1.5rem;
+}
+
+.botao-form {
+    color: white;
+    background: #34383a;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5 ease;
+}
+
+.botao-form:hover {
+    transform: translateY(-4px);
+}
+
+.fa-brands fa-whatsapp {
+    margin-right: 15px;
+}
+
+/*RODAPÈ*/
+footer {
+    background-color: #34383a;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+.ul-fot {
+    padding: 0;
+    margin-top: 20px;
+}
+
+.li-fot {
+    list-style-type: none;
+}
+
+.email {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.texto-fot {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/*FIM RODAPE*/
+
+
+.a-links:hover {
+    background-color: #8a8a8a;
+}
+
+.a-links i {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .cabeçalho {
+        width: 90%;
+    }
+
+    .ulCabeçalho {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        font-weight: bold;
+
+    }
+
+    .logoImg {
+        width: 70%;
+        margin-left: 50px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .caixa-links {
+        margin-bottom: 0%;
+        height: 300px;
+    }
+
+    .texto-1 {
+        font-size: 1.2rem;
+    }
+
+    .caixaPrincipal {
+        height: 20rem;
+    }
+
+    .aCabeçalho {
+        color: #34383a;
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    .a-links {
+        font-size: 1.7rem;
+    }
+
+    .email {
+        font-size: 1rem;
+    }
+
+    .texto-fot {
+        font-size: 1rem;
+    }
+
+}
