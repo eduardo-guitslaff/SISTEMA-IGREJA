@@ -1,38 +1,54 @@
-body {
-    padding: 0%;
-    margin: 0%;
+/* === RESET E BODY === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.cabeçalho {
-    margin-top: 2rem;
-    width: 100%;
+body {
+    background-color: var(--primaria);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+/* === VARIÁVEIS === */
+:root {
+    --primaria: #f8f5f0;
+    --botoeshover: #557570;
+    --escuro: #101d1b;
+    --maisEscuro: #0a0f1c;
+    --cabecalho: #34383a;
+    --botoes: #274945;
+    --cabecalhoHover: #dadada;
+}
+
+/* === CABEÇALHO === */
+.cabeçalho {
+    height: 5rem;
+    width: 100%;
+    background-color: var(--botoes);
 }
 
 .ulCabeçalho {
     display: flex;
     gap: 4rem;
     justify-content: center;
-
+    padding-top: 1rem;
 }
 
 .liCabeçalho {
-    list-style-type: none;
-
-
+    list-style: none;
 }
 
 .aCabeçalho {
-    color: #34383a;
+    color: var(--primaria);
     text-decoration: none;
     font-size: 2rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
     font-weight: 500;
     position: relative;
+    transition: color 0.3s ease;
 }
 
-/*after quer dizer antes*/
+/* Linha animada no hover */
 .aCabeçalho::after {
     content: '';
     height: 2px;
@@ -40,7 +56,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    background: #34383a;
+    background: var(--cabecalhoHover);
     transition: width 0.5s ease;
 }
 
@@ -49,89 +65,90 @@ body {
 }
 
 .aCabeçalho:hover {
-    color: #545c5f;
+    color: var(--cabecalhoHover);
 }
 
+/* === CAIXA PRINCIPAL / CARROSSEL === */
 .caixaPrincipal {
-    height: 30rem;
     margin: 5rem auto 0 auto;
-    display: block;
-    justify-content: center;
     width: 90%;
     max-width: 600px;
-
+    height: 30rem;
+    display: block;
+    justify-content: center;
 }
 
-.logoImg {
-    border: 2px solid #34383a;
-    border-top-right-radius: 5rem;
-    border-bottom-left-radius: 5rem;
+.carrossel {
     width: 100%;
-    max-width: 320px;
-    margin-left: 130px;
+    max-width: 800px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+.carrossel-imagens {
+    display: flex;
+    animation: slide 12s infinite;
+    width: 100%;
+    height: 400px;
+}
+
+.carrossel-imagens img {
+    width: 100%;
+    flex-shrink: 0;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Animação do carrossel */
+@keyframes slide {
+    0%, 10% { transform: translateX(0); }
+    14%, 24% { transform: translateX(-100%); }
+    28%, 38% { transform: translateX(-200%); }
+    42%, 52% { transform: translateX(-300%); }
+    56%, 66% { transform: translateX(-400%); }
+    70%, 80% { transform: translateX(-500%); }
+    84%, 94% { transform: translateX(-600%); }
+    100% { transform: translateX(0); }
+}
+
+/* === TEXTOS === */
 h1 {
     font-size: 3.5rem;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0%;
-    margin-bottom: 0%;
-    color: #34383a;
-    width: 100%;
+    color: var(--escuro);
     text-transform: uppercase;
+    position: relative;
+    z-index: 10;
 }
 
 .texto-1 {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     color: #383a3b;
     font-size: 2rem;
-    padding: 0%;
-    margin: 0%;
 }
 
+/* === LINKS DE REDES === */
 .caixa-links {
     width: 90%;
     max-width: 600px;
     height: 400px;
     margin: 5rem auto 0 auto;
-
+    position: relative;
 }
 
 .ul-links {
+    list-style: none;
     width: 100%;
-    margin: 0%;
-
-
-    margin: 5rem auto 0 auto;
     padding: 10px;
     border-radius: 10px;
-
+    margin: 0 auto;
 }
 
-.instagram {
-    list-style-type: none;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.facebook {
-    list-style-type: none;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.youtube {
-    list-style-type: none;
-    width: auto;
-    gap: 5rem;
+.ul-links li {
+    list-style: none;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -140,31 +157,35 @@ h1 {
 }
 
 .a-links {
-    background-color: #545c5f;
+    background-color: var(--botoes);
     text-decoration: none;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 3rem;
     width: 100%;
-    border: 1px solid rgb(32, 21, 21);
-    padding-bottom: 15px;
-    padding-top: 15px;
+    padding: 15px 0;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     border-radius: 8px;
+    border: 1px solid rgb(32,21,21);
+    transition: background-color 0.3s ease;
 }
 
+.a-links:hover {
+    background-color: var(--botoeshover);
+}
 
+.a-links i {
+    color: #ffffff;
+}
 
+/* === FORMULÁRIO DE CONTATO === */
 .contatos {
-    margin-top: 0%;
     padding: 6rem 2rem;
 }
 
 .contatos-titulo {
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
@@ -173,7 +194,7 @@ h1 {
 .formulario-contato {
     max-width: 600px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255,255,255,0.05);
     backdrop-filter: blur(5px);
     padding: 2rem;
     border: 3px solid #34383a;
@@ -181,22 +202,18 @@ h1 {
 }
 
 .campo-form {
-    width: 95%;
+    width: 100%;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255,255,255,0.05);
     border-radius: 8px;
-    color: #34383a;
     border: 2px solid #34383a;
     outline: none;
+    margin-bottom: 1.2rem;
 }
 
 .campo-form:focus {
     border-color: #34383a;
     box-shadow: 0 0 10px #34383a;
-}
-
-.grupo-form {
-    margin-bottom: 1.5rem;
 }
 
 .botao-form {
@@ -208,118 +225,101 @@ h1 {
     cursor: pointer;
     font-weight: bold;
     width: 100%;
-    transition: all 0.5 ease;
+    transition: transform 0.3s ease;
 }
 
 .botao-form:hover {
     transform: translateY(-4px);
 }
 
-.fa-brands fa-whatsapp {
-    margin-right: 15px;
-}
-
-/*RODAPÈ*/
+/* === RODAPÉ === */
 footer {
     background-color: #34383a;
-    height: 120px;
+    height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
 }
 
-.ul-fot {
+.ul-fot { 
     padding: 0;
-    margin-top: 20px;
+    margin: 0;
 }
 
 .li-fot {
-    list-style-type: none;
+    list-style: none;
 }
 
 .email {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
     display: inline-flex;
     align-items: center;
     gap: 10px;
 }
 
-.texto-fot {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-
-/*FIM RODAPE*/
-
-
-.a-links:hover {
-    background-color: #8a8a8a;
-}
-
-.a-links i {
-    color: #ffffff;
-}
-
+/* === RESPONSIVO === */
 @media (max-width: 768px) {
-    .cabeçalho {
-        width: 90%;
-    }
-
-    .ulCabeçalho {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        font-weight: bold;
-
-    }
-
-    .logoImg {
-        width: 70%;
-        margin-left: 50px;
-    }
 
     h1 {
         font-size: 2rem;
     }
 
-    .caixa-links {
-        margin-bottom: 0%;
-        height: 300px;
-    }
-
     .texto-1 {
         font-size: 1.2rem;
+        margin-bottom: 1rem;
+        padding-bottom: 50px;
     }
 
     .caixaPrincipal {
-        height: 20rem;
+        height: 25rem;
     }
 
-    .aCabeçalho {
-        color: #34383a;
-        text-decoration: none;
-        font-size: 1.4rem;
-        font-family: Arial, Helvetica, sans-serif;
+    .caixa-links {
+        height: 300px;
+        margin-top: 3rem;
     }
-
 
     .a-links {
         font-size: 1.7rem;
     }
 
-    .email {
+    .aCabeçalho {
+        font-size: 1.2rem;
+    }
+
+    .email, .texto-fot {
         font-size: 1rem;
     }
 
-    .texto-fot {
-        font-size: 1rem;
+    .botao-form {
+        width: 100%;
     }
 
+    .ulCabeçalho {
+        gap: 2.8rem;
+        padding-top: 2rem;
+        justify-content: center;
+    }
+
+    .img-foto {
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .img-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
 }
