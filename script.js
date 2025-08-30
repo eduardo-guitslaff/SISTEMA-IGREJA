@@ -4,7 +4,7 @@ function enviarWhats(event) {
     const nome = document.getElementById('nome').value; // adiciona .value para pegar o conteúdo
     const mensagem = document.getElementById('mensagem').value; // idem
 
-    const telefone = '554398018932';
+    const telefone = '554484653032';
 
     const texto = `Olá! Me chamo ${nome}, ${mensagem}`; // corrigido: "=" estava faltando
 
@@ -14,4 +14,5 @@ function enviarWhats(event) {
 
     window.open(url, '_blank'); // abre em nova aba
 }
+
 
